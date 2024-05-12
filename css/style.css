@@ -1,0 +1,527 @@
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body {
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+}
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+
+
+
+
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+/* 全体設定 */
+
+
+/*メインビジュアル
+---------------------*/
+.main-bg {	
+	position: relative;
+}
+
+.main-img {
+	width: 100%;
+}
+
+.mainbg1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: yellow;
+	font-size: 48px;
+	font-weight: bold;
+}
+.mainbg2 {
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: yellow;
+	font-size: 36px;
+}
+
+@media screen and (max-width: 1700px) {
+	.mainbg1 {
+		font-size: 3.2vw;
+	}
+
+	.mainbg2 {
+		font-size: 2.0vw;
+	}
+}
+
+/*navi
+---------------------*/
+.navi-all {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.navi-img-box {
+	width: 50%;
+	height: 80px;
+	margin: 10px;
+}
+
+.navi-list {
+	width: 50%;
+	display: flex;
+	margin: 10px;
+	border: #efefef;
+	height: 80px;
+	justify-content: center;
+}
+
+.navi-1,.navi-2,.navi-3,.navi-4,.navi-5 {
+	width: 20%;
+	font-size: 21px;
+	height: 80px;
+	background-color:rgb(245, 242, 70);
+	padding: 20px 50px;
+	margin-left: 2px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.navi-1:hover{
+	font-weight: bolder;
+	background-image:url(../img/cheese_comanbel.png);
+	background-position: center center;
+	background-size: contain;
+	background-color: transparent;
+}
+
+.navi-2:hover {
+	font-weight: bolder;
+	background-image: url(../img/cheese_mozarella.png);
+	background-position: center center;
+	background-size: contain;
+	background-color: transparent;
+}
+
+.navi-3:hover {
+	font-weight: bolder;
+	background-image: url(../img/cheese_blue.png);
+	background-position: center center;
+	background-size: contain;
+	background-color: transparent;
+}
+
+.navi-4:hover {
+	font-weight: bolder;
+	background-image: url(../img/animal_character_nezumi_cheese.png);
+	background-position: center center;
+	background-size: contain;
+	background-color: transparent;
+}
+
+.navi-5:hover {
+	font-weight: bolder;
+	background-image: url(../img/food_raclette_cheese.png);
+	background-position: center center;
+	background-size: contain;
+	background-color: transparent;
+}
+
+
+@media screen and (max-width: 1500px) {
+	.navi-1,.navi-2,.navi-3,.navi-4,.navi-5 {
+		width: 10vw;
+		padding: initial;
+		font-size: 1.7vw;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.navi-1, .navi-2, .navi-3, .navi-4, .navi-5
+	{	width: 10vw;
+		padding: initial;
+		font-size: 2vw;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;}
+
+	.navi-img-box {
+		width: 10vw;}
+
+	.navi-img {
+		width: 30vw;}
+}
+
+
+
+/*ABOUT
+---------------------*/
+.ABOUT {
+	text-align: center;
+	
+}
+
+.ABOUT-text-top {
+	color: #ffb61a;
+	font-size: 24px;
+	font-weight: bolder;
+	line-height: 24px;
+	padding: 120px 0 24px;
+}
+
+.ABOUT01 {
+	line-height: 16px;
+	padding: 0 0 64px;
+}
+
+.ABOUT02 {
+	line-height: 16px;
+	padding: 0 0 40px;
+}
+
+.ABOUT03 {
+	line-height: 16px;
+	padding: 40px 0 40px;
+}
+
+.ABOUT04 {
+	line-height: 16px;
+	padding: 0 0 80px;
+}
+
+.about-img{
+	display: flex;
+	justify-content: center;
+	padding: 0;
+}
+
+
+.slide-flame {
+	height:300px;
+	width: 900px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	}
+
+.slide-box {
+	display: flex;	
+	justify-content: center;
+	animation: slide-box-typ 20s linear infinite;
+}
+
+@keyframes slide-box-typ
+{
+		0% {transform: translateX(0);
+			}
+		100% {transform: translateX(100%);
+			}
+}
+
+/*course
+---------------------*/
+
+.course-top {
+	text-align: center;
+	padding: 64px;
+}
+
+.course-top-text {
+	color: ♯222222;
+		line-height: 24px;
+		font-size: 24px;
+		font-weight: bolder;
+		padding: 0 0 24px;
+}
+
+.course-body {
+	width: 1360px;
+	margin: 0 auto;
+}
+
+.course-box {
+	width: 100%;
+	height: 460px;
+	display: flex;
+	justify-content: center;
+}
+
+.course-img-box {
+	width: 50%;
+	height: 100%;
+}
+.course-img-box img{
+	width: 100%;
+	height: 100%;
+}
+	
+.course-content {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.course-text-box {
+	padding:48px;
+}
+
+.course-text-01 {
+	color: ♯222222;
+	font-size: 24px;
+	font-weight: bolder;
+	padding: 0 0 48px 0;
+}
+
+/* NEWS */
+.news-text-top {
+	text-align: center;
+	color: #ffb61a;
+	font-size: 24px;
+	font-weight: bolder;
+	padding: 20px;
+}
+.news-text01 {
+	text-align: center;
+}
+.news-all {
+	display: flex;
+	justify-content: space-around;
+	padding: 20px
+}
+
+.news01 img , .news02 img , .news03 img {
+	width: 300px;
+	height: 200px;
+
+}
+
+.more-news {
+	display: flex;
+	justify-content: center;
+	margin:  30px auto;
+	width: 150px;
+	height: 40px;
+	font-weight: bold;
+	background-color: yellow;
+	color: blue;
+	font-size: 20px;
+	border-radius: 25px
+}
+
+.more-news:active {
+	box-shadow: inset -5px -5px 10px rgb(241, 93, 8);
+}
+
+
+/*access
+---------------------*/
+.access-all {
+	text-align: center;
+	background-color: #fafafa;
+}
+.access01 {
+	color: ♯222222;
+	font-size: 24px;
+	font-weight: bolder;
+	padding: 64px 0 12px;
+}
+
+.access02 {
+	padding: 12px 0 52px;
+}
+
+iframe {width: 1000px;
+		height: 460px; }
+
+table {
+	margin-top: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 80px;
+	border: 2px solid rgb(140, 140, 140)
+}
+
+td {
+	padding: 12px 24px;
+	text-align: left;
+	border: 2px solid rgb(140, 140, 140)
+}
+
+.address {
+	padding: 20px;
+	margin:0 auto
+}
+
+/*contact
+---------------------*/
+.contact-all {
+	width: 960px;
+
+	margin: 0 auto;
+
+	padding: 60px 0;
+}
+
+.contact01 {
+	color: #222222;
+	font-size: 24px;
+	font-weight: bolder;
+	padding: 64px 0 5px;
+	text-align: center;
+}
+
+.contact02 {
+	padding: 5px 0 64px;
+	text-align: center;
+}
+
+.contact03 {
+	padding-bottom: 16px;
+	text-align: center;
+}
+
+.contact04 {
+	padding: 16px ;
+	font-size: 16px;
+	font-weight: bolder;
+	color: red;
+	text-align: center;
+	
+}
+
+.contact-table {
+	width: 900px;
+	margin-bottom: 20px;
+	background-image: url();
+}
+
+.contact-body {
+	padding: 20px;
+	width: 70%;
+}
+
+.contact-item {
+	width: 30%;
+	text-align: center;
+	vertical-align:middle;
+	background-color: #eee;
+}
+
+.contact-label {
+	display: flex;
+	justify-content: start;
+}
+
+.contact-label {
+	margin-top: 10px;
+}
+
+.contact-label-txt {
+	margin-left: 5px;
+}
+
+.form-text {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+.form-textarea {
+	width: 100%;
+	padding: 10px;
+	height: 200px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	}
+
+.form-button {
+	display:flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	height: 80px;
+	width: 80px;
+	background: yellow;
+	color: black;
+	font-size: 20px;
+	font-weight: bolder;
+	border-radius: 20px;
+}
+
+.form-button:active {
+	/* box-shadow: inset -5px -5px 10px rgb(241, 93, 8); */
+	width: 300px;
+	height: 300px;
+	background-color: transparent;
+	color: transparent;
+	background-image: url(../img/contact-ng.png);
+	background-position: center center;
+	background-size: cover;
+	position: fixed;
+	bottom: 5%;
+	left: 43%;
+}
+
+.page-top-button {
+	display: flex;
+	justify-content: end;
+	position: fixed;
+	bottom: 3%;
+	right: 0%;
+}
+
+.page-top-button-text {
+	width: 80px; 
+	height: 60px;
+	margin: 20px;
+	font-weight: bold;
+	background-color: yellow;
+	color: blue;
+	font-size: 20px;
+	border-radius: 25px
+}
+
+.page-top-button-text:active {
+box-shadow: inset -5px -5px 10px rgb(241, 93, 8);
+}
+
+/* copy right
+---------------------*/
+.copy-right {
+text-align: center;
+	font-size: 18px;
+	color: whitesmoke;
+	background-color: #707070;
+}
